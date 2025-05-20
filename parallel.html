@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elaborazione Parallela - EvoSphereOS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Same header as index.html -->
+    </header>
+
+    <main class="parallel-main">
+        <section class="parallel-intro">
+            <h1>Elaborazione Sequenziale vs Parallela</h1>
+            <p>Comprendere la differenza tra elaborazione sequenziale e parallela è fondamentale per apprezzare le capacità di EvoSphereOS.</p>
+        </section>
+
+        <section class="comparison">
+            <div class="sequential">
+                <h2>Elaborazione Sequenziale</h2>
+                <div class="process-visual">
+                    <div class="task" style="--delay: 0">1</div>
+                    <div class="task" style="--delay: 1">2</div>
+                    <div class="task" style="--delay: 2">3</div>
+                    <div class="task" style="--delay: 3">4</div>
+                </div>
+                <ul>
+                    <li>Esecuzione un task alla volta</li>
+                    <li>Più semplice da implementare</li>
+                    <li>Non sfrutta i core multipli della CPU</li>
+                    <li>Adatto per task semplici</li>
+                </ul>
+            </div>
+
+            <div class="parallel">
+                <h2>Elaborazione Parallela</h2>
+                <div class="process-visual">
+                    <div class="task" style="--delay: 0">1</div>
+                    <div class="task" style="--delay: 0">2</div>
+                    <div class="task" style="--delay: 0.5">3</div>
+                    <div class="task" style="--delay: 0.5">4</div>
+                </div>
+                <ul>
+                    <li>Esecuzione simultanea di più task</li>
+                    <li>Sfrutta i core multipli della CPU</li>
+                    <li>Maggiori prestazioni</li>
+                    <li>Complessità maggiore</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="parallel-in-os">
+            <h2>Come EvoSphereOS gestisce l'elaborazione parallela</h2>
+            <div class="os-features">
+                <div class="os-feature">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Fork-Join</h3>
+                    <p>Implementazione efficiente del modello fork-join per suddividere e ricomporre i task.</p>
+                </div>
+                <div class="os-feature">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>CoBegin-CoEnd</h3>
+                    <p>Supporto per strutture cobegin-coend per la gestione di sezioni parallele.</p>
+                </div>
+                <div class="os-feature">
+                    <i class="fas fa-lock"></i>
+                    <h3>Deadlock Prevention</h3>
+                    <p>Meccanismi avanzati per prevenire i deadlock nei processi paralleli.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
